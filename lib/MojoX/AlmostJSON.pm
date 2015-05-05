@@ -1,4 +1,5 @@
 package MojoX::AlmostJSON;
+
 # ABSTRACT: Almost JSON but allow javascript function
 # Code stolen from Mojo::JSON
 use Mojo::Base -strict;
@@ -285,6 +286,7 @@ sub _throw {
  
 # Emulate boolean type
 package MojoX::AlmostJSON::_Bool;
+
 use overload '""' => sub { ${$_[0]} }, fallback => 1;
  
 1;
